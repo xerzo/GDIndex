@@ -17,12 +17,32 @@
 							}}<v-icon>mdi-menu-down</v-icon>
 						</v-btn>
 					</template>
-
+					<v-list>
+						<v-list-item
+							v-for="(item, index) in drives"
+							:key="index.id"
+							@click="changeDrive(item.value)"
+						>
+							<v-list-item-title>{{
+								item.text
+							}}</v-list-item-title>
+						</v-list-item>
+					</v-list>
 				</v-menu>
 			</v-toolbar-items>
 			<portal-target name="navbar" slim />
 			<v-spacer />
-			
+			<v-toolbar-items>
+				<v-btn
+					text
+					class="text-none hidden-sm-and-down"
+					tag="a"
+					href="https://github.com/maple3142/GDIndex"
+					target="_blank"
+				>
+					<v-icon>mdi-github-circle</v-icon>&nbsp;GitHub</v-btn
+				>
+			</v-toolbar-items>
 		</v-app-bar>
 
 		<v-content> <router-view /> </v-content>
@@ -32,7 +52,6 @@
 <script>
 import api from './api'
 import LoginDialog from './components/LoginDialog.vue'
-
 export default {
 	props: {
 		title: String
@@ -63,7 +82,6 @@ export default {
 					}
 				}))
 		if (!ok) return
-
 		const { drives } = await api.get('/~_~_gdindex/drives').json()
 		this.drives = [{ text: this.$t('mainDrive'), value: 'root' }].concat(
 			drives.map(d => ({
