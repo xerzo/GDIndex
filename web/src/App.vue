@@ -37,10 +37,10 @@
 					text
 					class="text-none hidden-sm-and-down"
 					tag="a"
-					href="https://github.com/maple3142/GDIndex"
+					href="https://github.com/maple3142/GDIndexxxxxx"
 					target="_blank"
 				>
-					<v-icon>mdi-github-circle</v-icon>&nbsp;GitHub</v-btn
+					<v-icon>mdi-github-circle</v-icon>&nbsp;GitHuxb</v-btn
 				>
 			</v-toolbar-items>
 		</v-app-bar>
