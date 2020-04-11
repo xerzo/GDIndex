@@ -37,7 +37,7 @@
 					text
 					class="text-none hidden-sm-and-down"
 					tag="a"
-					href="https://github.com/maple3142/GDIndexxxxxx"
+					href="https://github.com/maple3142/GDIndexxxx"
 					target="_blank"
 				>
 					<v-icon>mdi-github-circle</v-icon>&nbsp;GitHuxb</v-btn
